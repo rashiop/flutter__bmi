@@ -1,7 +1,8 @@
+import 'package:bmi_calculator/components/round_rounded_button.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'constants.dart';
+import '../constants.dart';
 
 class NumberCard extends StatelessWidget {
   const NumberCard({
@@ -53,35 +54,6 @@ class NumberCard extends StatelessWidget {
           ],
         ),
       ],
-    );
-  }
-}
-
-class RoundIconButton extends StatelessWidget {
-  RoundIconButton({
-    @required this.onPressed,
-    @required this.icon,
-  });
-
-  final Function onPressed;
-  final IconData icon;
-
-  @override
-  Widget build(BuildContext context) {
-    return RawMaterialButton(
-      onPressed: onPressed,
-      elevation: 6.0,
-      disabledElevation: 6.0,
-      child: Icon(
-        icon,
-        color: Colors.white,
-      ),
-      fillColor: Color(0xFF4C4F5E),
-      shape: CircleBorder(),
-      constraints: BoxConstraints.tightFor(
-        height: 56,
-        width: 56,
-      ),
     );
   }
 }
